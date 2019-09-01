@@ -16,7 +16,7 @@ namespace SimleSurvey.Data
             if (!content.Survey.Any())
             {
                 content.AddRange(
-                    new Survey { nameSurvey = "Жизнь в вашей стране", description = "Этот опрос для того чтобы узнать на сколько вам комфортно живется в вашей стране" },
+                    new Survey { nameSurvey = "Жизнь в вашей стране!", description = "Этот опрос для того чтобы узнать на сколько вам комфортно живется в вашей стране" },
                     new Survey { nameSurvey = "Ваш уровень английского языка", description = "Этот опрос для того чтобы проверить ваш уровень знания английского языка" }
                     );
             }
