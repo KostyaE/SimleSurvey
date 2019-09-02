@@ -3,14 +3,9 @@
 <div class="row mt-5 mb-2">
     @{
 
-        foreach (var surv in Model.allsurvey)
+        foreach (Survey surv in Model.allsurvey)
         {
-
-            <div class="col-lg-6">
-                <h2>Опрос: @surv.nameSurvey</h2>
-                <p>Описание: @surv.description</p>
-                <p><a class="btn btn-warning" href="#">Подробнее</a> </p>
-            </div>
+            @Html.Partial("allsurvey", surv)
         }
     }
 </div>

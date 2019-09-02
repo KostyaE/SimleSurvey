@@ -18,5 +18,7 @@ namespace SimleSurvey.Data
         
         public DbSet<Survey> Survey { set; get; }
 
+        public DbSet<Question> Question { set; get; }
+
     }
 }

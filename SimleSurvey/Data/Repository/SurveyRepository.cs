@@ -17,7 +17,7 @@ namespace SimleSurvey.Data.Repository
             this.appDBContent = appDBContent;
         }
 
-        public IEnumerable<Survey> AllSurveys => appDBContent.Survey.Include(c => c.nameSurvey);
+        public IEnumerable<Survey> AllSurveys => appDBContent.Survey.Include(c => c.allQuestions);
 
         public Survey CreateSurvey(int userID)
         {

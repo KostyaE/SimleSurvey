@@ -7,6 +7,13 @@ namespace SimleSurvey.Data.Models
 {
     public class Survey
     {
+        public readonly AppDBContent appDBContent;
+
+        public Survey(AppDBContent appDBContent)
+        {
+            this.appDBContent = appDBContent;
+        }
+
         public int id { set; get; }
 
         public string nameSurvey { set; get; }
@@ -17,6 +24,22 @@ namespace SimleSurvey.Data.Models
 
         public bool active { set; get; } //открыт или закрыт опрос
 
+
+        public void AddQuastion()
+        {
+            this.appDBContent.Question.Add(new Question
+            {
+                question = "Vopros1",
+                answer = "Otvet1"
+            });
+
+            appDBContent.SaveChanges();
+        }
+
+        public List<Question> GetQuas()
+        {
+            return appDBContent.Question.Where(c => c.id == id).ToList();
+        }
 
     }
 }
